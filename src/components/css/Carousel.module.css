@@ -1,0 +1,7 @@
+@import url("bootstrap/dist/css/bootstrap.min.css");
+
+.carousel-div {
+  margin: 0 auto;
+  height: 100px;
+  width: 65%;
+}
