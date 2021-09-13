@@ -1,51 +1,42 @@
 import React, { useState } from "react";
-import style from "./css/Navbar.module.css";
-import Sidebar from "./Sidebar";
-import { IconContext } from "react-icons";
-import { BiSearchAlt } from "react-icons/bi";
-import { FaShoppingCart } from "react-icons/fa";
+import "./css/Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { NavLink } from "react-router-dom";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import { FiSearch } from "react-icons/fi";
+import { BiCartAlt } from "react-icons/bi";
+import { IconContext } from "react-icons/lib";
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => {
-    setSidebar(!sidebar);
-  };
+
+  const showSidebar = () => setSidebar(!sidebar);
   return (
-    <nav className={style.navbar}>
-      <IconContext.Provider value={{ size: "1.6em" }}>
-        <div className={style["logo-section"]}>
-          {/* {sidebar && <Sidebar />} */}
-          {/* <GiHamburgerMenu
-            style={{ cursor: "pointer" }}
-            onClick={showSidebar}
-          /> */}
-          <Sidebar />
-
-          <div className={style.logo}>
-            <NavLink to="./" className={style["navbar-brand"]}>
-              Logo
-            </NavLink>
+    <>
+      <IconContext.Provider value={{ size: "30px", color: "white" }}>
+        <div className="navbar">
+          <GiHamburgerMenu onClick={showSidebar} />
+          <div className="search-bar">
+            <input type="text" />
+            <FiSearch />
+          </div>
+          <div className="links">
+            <BiCartAlt />
+            <div className="nav-links">login</div>
+            <div className="nav-links">Signup</div>
           </div>
         </div>
-        <div className={style["search-section"]}>
-          <div>
-            <input type="text" id="text" className={style["search-bar"]} />
-          </div>
-          <BiSearchAlt />
-        </div>
-        <div className={style["links-section"]}>
-          <FaShoppingCart className={style["nav-link"]} />
-
-          <NavLink to="/login" className={style["nav-link"]}>
-            Login
-          </NavLink>
-          <a href="./" className={style["nav-link"]}>
-            Sign up
-          </a>
-        </div>
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <AiOutlineCloseCircle onClick={showSidebar} className="cross-icon" />
+          <ul>
+            <li className="nav-item">
+              <a href="">hello</a>
+            </li>
+            <li className="nav-item">
+              <a href="">hello</a>
+            </li>
+          </ul>
+        </nav>
       </IconContext.Provider>
-    </nav>
+    </>
   );
 };
 

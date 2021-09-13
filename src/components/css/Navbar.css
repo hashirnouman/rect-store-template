@@ -1,0 +1,62 @@
+.navbar {
+  background-color: #388087;
+  height: 7vh;
+  color: #f6f6f2;
+  padding-left: 13px;
+  padding-top: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cross-icon {
+  margin-top: 10px;
+  margin-left: 170px;
+}
+.nav-menu {
+  background-color: #060b26;
+  width: 250px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  z-index: 1500;
+}
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+.nav-item {
+  list-style: none;
+  padding: 10px;
+  color: white;
+  transition: 400ms ease-in-out;
+}
+.nav-item:hover {
+  background-color: #ffff;
+  transition: 400ms ease-in-out;
+  color: #060b26;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-bar input {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  margin: 10px;
+}

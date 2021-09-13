@@ -1,0 +1,14 @@
+.sidebar {
+  background-color: azure;
+  height: 300vh;
+  z-index: 10000;
+  position: fixed;
+  width: 500px;
+  left: 0;
+  top: 0;
+}
+
+.sidebar .active {
+  left: -20%;
+  transition: 0.3s;
+}

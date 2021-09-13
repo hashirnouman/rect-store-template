@@ -4,13 +4,13 @@ import Slider from "../components/Slider";
 import Card from "../components/Card";
 import Flex from "../components/Flex";
 import Footer from "../components/Footer";
+
 import "./css/Home.module.css";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <br />
       <Slider />
       <br />
       <Flex>
