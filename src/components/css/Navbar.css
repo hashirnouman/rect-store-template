@@ -13,7 +13,7 @@
   margin-left: 170px;
 }
 .nav-menu {
-  background-color: #060b26;
+  background-color: #265155;
   width: 250px;
   height: 100vh;
 
@@ -36,7 +36,7 @@
 .nav-item:hover {
   background-color: #ffff;
   transition: 400ms ease-in-out;
-  color: #060b26;
+  color: #265155;
 }
 
 .search-bar {
@@ -59,4 +59,9 @@
 }
 .nav-links {
   margin: 10px;
+  cursor: pointer;
+}
+
+.selected {
+  border-bottom: 2px solid white;
 }
